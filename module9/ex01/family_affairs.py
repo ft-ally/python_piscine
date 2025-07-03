@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
+def check(name, members):
+	return members[name] == 'red'
+
 class Family:
-	def find_the_redheads(self, dict):
-		result = []
-		for name, color in dict.list():
-			
-		return result
+	def find_the_redheads(self, members):
+		redheads = filter(lambda name: check(name, members), members)
+		return list(redheads)
 
 dupont_family = {
 	"florian": "red",
